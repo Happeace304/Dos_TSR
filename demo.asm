@@ -1,4 +1,5 @@
 
+
 code segment para
 assume cs:code
 org 100h                ;prog seg prefix addrss
@@ -121,13 +122,12 @@ check_mouse:
 	mov al, '='
 	call disp
 	mov ax, cx
-	
 	call print_ax
 
-	
 	;--show y--
 	mov bh, temp1
 	mov bl, temp2
+
 	mov al, ' '
 	call disp
 	mov al, 'y'
@@ -136,6 +136,10 @@ check_mouse:
 	call disp
 	mov ax, dx
 	call print_ax
+	mov al, ''
+	call disp
+	mov al, ''
+	call disp
 	ret
 
 
